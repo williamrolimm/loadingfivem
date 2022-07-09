@@ -1,0 +1,156 @@
+<html>
+    <head>
+    <title>CHICAGOCITY
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <script type="text/javascript" src="js/text.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="videoContainer">
+        <div id="overlay"></div>    
+        <div id="main">
+                <header id="header">
+                    <h1>CHICAGO CITY</h1>
+                    <script type="text/javascript" charset="utf-8">
+                        function addZero(i) {
+                            if (i < 10) {i = "0" + i}
+                            return i;
+                            }
+                        let a;
+                        let time;
+                        var dt = new Date();
+                        setInterval(() => {
+                          a = new Date();
+                          time = addZero(a.getHours()) + ':' + addZero(a.getMinutes()) + ':' + addZero(a.getSeconds());
+                          document.getElementById('time').innerHTML = (("0"+dt.getDate()).slice(-2))+"-"+ (("0"+(dt.getMonth()+1)).slice(-2))+"-"+ (dt.getFullYear()) +" "+ time;
+                        }, );
+                      </script>
+                      <h3>TIME</h3>
+                        <h2 id="time"></h2>
+                        <nav>
+                        <ul>
+                            <li><a href="https://discord.gg/9aFADrAUd2" class="icon brands fa-discord" target="_blank" onclick="window.invokeNative('openUrl', 'https://discord.gg/9aFADrAUd2');" style="color: #738ADB"><span class="label">Discord</span></a></li>
+                            <li><a href="https://discord.gg/9aFADrAUd2" class="fas fa-code" target="_blank" onclick="window.invokeNative('openUrl', 'https://discord.gg/9aFADrAUd2');"><span class="label">Website</span></a></li>
+                            <li><a href="https://discord.gg/9aFADrAUd2" class="fab fa-tiktok" target="_blank" onclick="window.invokeNative('openUrl', 'https://discord.gg/9aFADrAUd2');" style="color: black"><span class="label">Website</span></a></li>
+                            <li><a href="https://www.instagram.com/chicagocityrp_/" class="icon brands fa-instagram" target="_blank" onclick="window.invokeNative('openUrl', 'https://www.instagram.com/chicagocityrp_/');" style="color: #da10a4;"><span class="label">Instagram</span></a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+		</div>
+        <video autoplay muted loop id="video">
+            <source src="video/video.mp4" type="video/mp4">
+          </video>
+        </div>
+          <div id="controls">
+               <div class="playPause"></div>
+            </div>
+               </div>
+
+            <div class="scale">
+               <div class="icon"></div>
+            </div>
+         </div>      
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+                <img src="img/music.png" width="30px" height="30px">
+                <span></span>
+            </label>
+
+        <ul class="menu__box">
+
+            <div id="app-cover">
+                <div id="player">
+                    <div id="player-track">
+                        <div id="album-name"></div>
+                        <div id="track-name"></div>
+                        <div id="track-time">
+                            <div id="current-time"></div>
+                            <div id="track-length"></div>
+                        </div>
+                        <div id="s-area">
+                            <div id="ins-time"></div>
+                            <div id="s-hover"></div>
+                            <div id="seek-bar"></div>
+                        </div>
+                    </div>
+                    <div id="player-content">
+                        <div id="album-art">
+                            <img src="https://media.discordapp.net/attachments/908461898033397780/956938402060722316/1024.png?width=702&height=702" class="active" id="_1">
+                            <img src="https://media.discordapp.net/attachments/908461898033397780/956938402060722316/1024.png?width=702&height=702" id="_2">
+                            <img src="https://media.discordapp.net/attachments/908461898033397780/956938402060722316/1024.png?width=702&height=702" id="_3">
+                            <img src="https://media.discordapp.net/attachments/908461898033397780/956938402060722316/1024.png?width=702&height=702" id="_4">
+                            <img src="https://media.discordapp.net/attachments/908461898033397780/956938402060722316/1024.png?width=702&height=702" id="_5">
+                            <div id="buffer-box">Loading ...</div>
+                        </div>
+                        <div id="player-controls">
+                            <div class="control">
+                                <div class="button" id="play-previous">
+                                    <i class="fas fa-backward"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-pause-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-next">
+                                    <i class="fas fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ul>
+    </div>
+    <footer id="footer">
+        <span class="copyright">&copy;Todos os direitos reservados: <a href="https://www.instagram.com/chicagocityrp_/" target="_blank" onclick="window.invokeNative('openUrl', 'https://www.instagram.com/chicagocityrp_/');">CHICAGO CITY</a>.</span>
+    </footer>
+    <script>
+        window.onload = function() { document.body.classList.remove('is-preload'); }
+        window.ontouchmove = function() { return false; }
+        window.onorientationchange = function() { document.body.scrollTop = 0; }
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        function ffalse() {
+            return false;
+        }
+
+        function ftrue() {
+            return true;
+        }
+
+        document.onselectstart = new Function("return false");
+        if (window.sidebar) {
+            document.onmousedown = ffalse;
+            document.onclick = ftrue;
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).mousemove(function(e) {
+            $("#cursor").css({
+                left: e.pageX,
+                top: e.pageY
+            });
+        })
+    </script>
+<script  src="js/function.js"></script>
+</body>
+
+</html>
